@@ -1,0 +1,10 @@
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\bin\Debug\FreezerDatabase.exe.config
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\bin\Debug\FreezerDatabase.exe
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\bin\Debug\FreezerDatabase.pdb
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\obj\Debug\FreezerDatabase.Form1.resources
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\obj\Debug\FreezerDatabase.Properties.Resources.resources
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\obj\Debug\FreezerDatabase.csproj.GenerateResource.cache
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\obj\Debug\FreezerDatabase.csproj.CoreCompileInputs.cache
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\obj\Debug\FreezerDatabase.exe
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\obj\Debug\FreezerDatabase.pdb
+C:\Users\Isac\Main\N\NEA\Isaac Harris\Source Code\FreezerDatabase\FreezerDatabase\obj\Debug\FreezerDatabase.csprojAssemblyReference.cache
