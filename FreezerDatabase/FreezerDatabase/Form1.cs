@@ -53,7 +53,14 @@ namespace FreezerDatabase
 
         private void orderButton_Click(object sender, EventArgs e)
         {
-
+            if (sortExpiryDate.Checked == true)
+            {
+                this.dataGridView1.Sort(this.dataGridView1.Columns[2], ListSortDirection.Ascending); //sort by expiry date (closest expiry date first)
+            }
+            else
+            {
+                this.dataGridView1.Sort(this.dataGridView1.Columns[0], ListSortDirection.Ascending); //sort by ID (also identical to input order)
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,6 +70,14 @@ namespace FreezerDatabase
 
         }
 
-        
+        private void sortExpiryDate_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,21 +41,22 @@ namespace FreezerDatabase
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.freezerDatabaseDataSet = new FreezerDatabase.FreezerDatabaseDataSet();
-            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockTableAdapter = new FreezerDatabase.FreezerDatabaseDataSetTableAdapters.StockTableAdapter();
             this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.useByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.additionalNotesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.freezerDatabaseDataSet = new FreezerDatabase.FreezerDatabaseDataSet();
+            this.stockTableAdapter = new FreezerDatabase.FreezerDatabaseDataSetTableAdapters.StockTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.sortItemID = new System.Windows.Forms.RadioButton();
             this.orderButton = new System.Windows.Forms.Button();
+            this.sortExpiryDate = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.freezerDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezerDatabaseDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +67,6 @@ namespace FreezerDatabase
             this.itemName.Name = "itemName";
             this.itemName.Size = new System.Drawing.Size(144, 20);
             this.itemName.TabIndex = 1;
-            this.itemName.TextChanged += new System.EventHandler(this.itemName_TextChanged);
             // 
             // useBy
             // 
@@ -74,7 +74,6 @@ namespace FreezerDatabase
             this.useBy.Name = "useBy";
             this.useBy.Size = new System.Drawing.Size(144, 20);
             this.useBy.TabIndex = 2;
-            this.useBy.ValueChanged += new System.EventHandler(this.useBy_ValueChanged);
             // 
             // additionalNotes
             // 
@@ -82,7 +81,6 @@ namespace FreezerDatabase
             this.additionalNotes.Name = "additionalNotes";
             this.additionalNotes.Size = new System.Drawing.Size(144, 20);
             this.additionalNotes.TabIndex = 3;
-            this.additionalNotes.TextChanged += new System.EventHandler(this.additionalNotes_TextChanged);
             // 
             // locationDescription
             // 
@@ -90,7 +88,6 @@ namespace FreezerDatabase
             this.locationDescription.Name = "locationDescription";
             this.locationDescription.Size = new System.Drawing.Size(144, 20);
             this.locationDescription.TabIndex = 4;
-            this.locationDescription.TextChanged += new System.EventHandler(this.locationDescription_TextChanged);
             // 
             // saveRecord
             // 
@@ -160,20 +157,6 @@ namespace FreezerDatabase
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.TabStop = false;
             // 
-            // freezerDatabaseDataSet
-            // 
-            this.freezerDatabaseDataSet.DataSetName = "FreezerDatabaseDataSet";
-            this.freezerDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stockBindingSource
-            // 
-            this.stockBindingSource.DataMember = "Stock";
-            this.stockBindingSource.DataSource = this.freezerDatabaseDataSet;
-            // 
-            // stockTableAdapter
-            // 
-            this.stockTableAdapter.ClearBeforeFill = true;
-            // 
             // itemIDDataGridViewTextBoxColumn
             // 
             this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "itemID";
@@ -205,35 +188,50 @@ namespace FreezerDatabase
             this.locationDescriptionDataGridViewTextBoxColumn.HeaderText = "locationDescription";
             this.locationDescriptionDataGridViewTextBoxColumn.Name = "locationDescriptionDataGridViewTextBoxColumn";
             // 
+            // stockBindingSource
+            // 
+            this.stockBindingSource.DataMember = "Stock";
+            this.stockBindingSource.DataSource = this.freezerDatabaseDataSet;
+            // 
+            // freezerDatabaseDataSet
+            // 
+            this.freezerDatabaseDataSet.DataSetName = "FreezerDatabaseDataSet";
+            this.freezerDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stockTableAdapter
+            // 
+            this.stockTableAdapter.ClearBeforeFill = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.saveRecord);
             this.groupBox1.Location = new System.Drawing.Point(13, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(443, 115);
+            this.groupBox1.Size = new System.Drawing.Size(443, 119);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.sortItemID);
             this.groupBox2.Controls.Add(this.orderButton);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.sortExpiryDate);
             this.groupBox2.Location = new System.Drawing.Point(472, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(162, 115);
+            this.groupBox2.Size = new System.Drawing.Size(88, 115);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             // 
-            // radioButton1
+            // sortItemID
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(71, 53);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.sortItemID.AutoSize = true;
+            this.sortItemID.Location = new System.Drawing.Point(6, 53);
+            this.sortItemID.Name = "sortItemID";
+            this.sortItemID.Size = new System.Drawing.Size(75, 17);
+            this.sortItemID.TabIndex = 2;
+            this.sortItemID.TabStop = true;
+            this.sortItemID.Text = "Input Date";
+            this.sortItemID.UseVisualStyleBackColor = true;
             // 
             // orderButton
             // 
@@ -244,6 +242,18 @@ namespace FreezerDatabase
             this.orderButton.Text = "Sort";
             this.orderButton.UseVisualStyleBackColor = true;
             this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
+            // 
+            // sortExpiryDate
+            // 
+            this.sortExpiryDate.AutoSize = true;
+            this.sortExpiryDate.Location = new System.Drawing.Point(6, 35);
+            this.sortExpiryDate.Name = "sortExpiryDate";
+            this.sortExpiryDate.Size = new System.Drawing.Size(79, 17);
+            this.sortExpiryDate.TabIndex = 0;
+            this.sortExpiryDate.TabStop = true;
+            this.sortExpiryDate.Text = "Expiry Date";
+            this.sortExpiryDate.UseVisualStyleBackColor = true;
+            this.sortExpiryDate.CheckedChanged += new System.EventHandler(this.sortExpiryDate_CheckedChanged);
             // 
             // Form1
             // 
@@ -266,8 +276,8 @@ namespace FreezerDatabase
             this.Text = "Freezer Database";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.freezerDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freezerDatabaseDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -276,25 +286,6 @@ namespace FreezerDatabase
 
         }
 
-        private void locationDescription_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void additionalNotes_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void itemName_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void useBy_ValueChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         #endregion
         private System.Windows.Forms.TextBox itemName;
@@ -318,7 +309,13 @@ namespace FreezerDatabase
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button orderButton;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton sortExpiryDate;
+        private System.Windows.Forms.RadioButton sortItemID;
+
+        public EventHandler itemName_TextChanged { get; private set; }
+        public EventHandler useBy_ValueChanged { get; private set; }
+        public EventHandler additionalNotes_TextChanged { get; private set; }
+        public EventHandler locationDescription_TextChanged { get; private set; }
     }
 }
 
